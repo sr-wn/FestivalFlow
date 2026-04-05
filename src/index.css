@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 0.8s ease-out forwards;
+}
+
+.animate-fade-rise-delay {
+  animation: fade-rise 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-rise-delay-2 {
+  animation: fade-rise 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+@layer base {
+  :root {
+    --background: 30 40% 98%;
+    --foreground: 20 30% 12%;
+
+    --card: 30 30% 97%;
+    --card-foreground: 20 30% 12%;
+
+    --popover: 30 30% 97%;
+    --popover-foreground: 20 30% 12%;
+
+    --primary: 15 75% 50%;
+    --primary-foreground: 40 100% 97%;
+
+    --secondary: 38 55% 92%;
+    --secondary-foreground: 20 30% 15%;
+
+    --muted: 35 25% 93%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 160 35% 45%;
+    --accent-foreground: 160 60% 97%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 15 75% 50%;
+
+    --radius: 0.75rem;
+
+    --festive-gold: 42 85% 55%;
+    --festive-gold-foreground: 42 90% 15%;
+    --festive-teal: 170 40% 42%;
+    --festive-teal-foreground: 170 60% 97%;
+    --festive-rose: 350 55% 58%;
+    --festive-rose-foreground: 350 80% 97%;
+    --festive-amber: 28 80% 52%;
+    --festive-amber-foreground: 28 90% 97%;
+
+    --sidebar-background: 30 30% 97%;
+    --sidebar-foreground: 20 20% 30%;
+    --sidebar-primary: 15 75% 50%;
+    --sidebar-primary-foreground: 40 100% 97%;
+    --sidebar-accent: 38 55% 92%;
+    --sidebar-accent-foreground: 20 30% 15%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 15 75% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
